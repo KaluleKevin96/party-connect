@@ -4,20 +4,30 @@ body {
 	font-family: Tahoma, 'Open Sans', Verdana, Geneva, sans-serif !important;
 }
 
+.custom-margin {
+	margin:0% 5%;
+	width:100%;
+}
+
 .logo img {
 	
-	width:25%;
+	width:60%;
 }
 
 .blog-entry span.day {
 	font-size: 125%;
 }
 
+	/* ------------------- menu styles ---------------------- */
+	.navbar-brand img {
+		width : 50%;
+	}
+
 	.mainMenu-container{
 		transition: 0.6s ease;
 		/* background-color:rgba(0, 0, 0, 0.5); */
 		background-color: transparent;
-		padding:30px 20px !important;
+		padding:20px !important;
 	}
 
   /* The class is added to the header with JS when it reaches its scroll position to changer BG color*/
@@ -34,11 +44,53 @@ body {
 		z-index: 999;
 	  }
 
-	/* slider styles */
+	.mainMenu-container .main-menu {
+		margin-top:7.5%;
+		min-width:80%;
+	}
+
+	.main-menu .nav-item .nav-link {
+		font-size: 20px;
+		color:whitesmoke;
+	}
+
+	.main-menu li.nav-item:hover,
+	.main-menu li.nav-item.active,
+	.ftco-navbar-light.scrolled .nav-item:hover {
+
+		background-color: rgba(126, 30, 110, 0.65);
+		/* border-radius:5%; */
+	}
+
+	.ftco-navbar-light .navbar-nav > .nav-item {
+		margin:0% 2%;
+	}
+
+	/* ----------- menu styles when scrolled ----------------------------*/
+	.mainMenu-container.scrolled .main-menu {
+		margin-top:3.5%;
+	}
+
+	.ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link {
+		font-size:18px;
+		color:#000;
+	  }
+
+	  .ftco-navbar-light.scrolled .navbar-nav > .nav-item:hover > .nav-link,
+	  .ftco-navbar-light.scrolled .navbar-nav > .nav-item:hover > .nav-link:hover,
+	  .ftco-navbar-light.scrolled .nav-link:hover  {
+		color:whitesmoke;
+	  }
+
+	.mainMenu-container.scrolled .navbar-brand img {
+		width : 30%;
+	}
+
+	/* --------------------------------- slider styles -----------------------------------------*/
 	#slider-section .carousel-caption {
 		
 		bottom:unset;
-		top:30%;
+		top:35%;
 	}
 
 	#slider-section .carousel-caption .icon {
