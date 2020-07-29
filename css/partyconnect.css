@@ -82,6 +82,11 @@ body {
 
 
 	/* --------------------------------- slider styles -----------------------------------------*/
+	.carousel-item{
+		background-position: center;
+		background-size: cover;
+	}
+
 	#slider-section .carousel-caption {
 		
 		bottom:unset;
@@ -118,6 +123,11 @@ body {
 		font-size:67px;
 		/* font-weight: 700; */
 		color:whitesmoke;
+	}
+
+	#slider-section .carousel-caption.first-main-caption{
+		top:28%;
+		font-size:70px;
 	}
 
 	#slider-section .carousel-caption p {
@@ -212,10 +222,32 @@ body {
 			margin-top:5%;
 		}
 
-		/* slider styles */
+		/* -------------------------------slider styles ------------------------------------- */
 		#slider-section .carousel-item {
 		
 			height: 400px;
+		}
+
+		#slider-section .carousel-caption {		
+			top:32.5%;
+		}
+		
+		#slider-section .carousel-caption .icon span {
+			font-size: 40px;
+		}
+
+		#slider-section .carousel-caption h1 {			
+			font-size:40px;
+
+		}
+	
+		#slider-section .carousel-caption p {
+			display:none;
+		}
+
+		#slider-section .carousel-caption.first-main-caption{
+			top:25%;
+			font-size:40px;
 		}
 }
 
@@ -249,7 +281,7 @@ body {
 		width : 30%;
 	}
 
-	/* slider styles */
+	/* ------------------------- slider styles ------------------------------------ */
 	#slider-section .carousel-item {
 		
 		height: 800px;
