@@ -19,15 +19,10 @@ body {
 }
 
 	/* ------------------- menu styles ---------------------- */
-	.navbar-brand img {
-		width : 50%;
-	}
-
 	.mainMenu-container{
-		transition: 0.6s ease;
+		transition: 0.3s ease;
 		/* background-color:rgba(0, 0, 0, 0.5); */
 		background-color: transparent;
-		padding:20px !important;
 	}
 
   /* The class is added to the header with JS when it reaches its scroll position to changer BG color*/
@@ -55,20 +50,22 @@ body {
 	}
 
 	.main-menu li.nav-item:hover,
-	.main-menu li.nav-item.active,
-	.ftco-navbar-light.scrolled .nav-item:hover {
+	.main-menu li.nav-item.active{
 
 		background-color: rgba(126, 30, 110, 0.65);
 		/* border-radius:5%; */
 	}
 
-	.ftco-navbar-light .navbar-nav > .nav-item {
-		margin:0% 2%;
-	}
-
 	/* ----------- menu styles when scrolled ----------------------------*/
 	.mainMenu-container.scrolled .main-menu {
 		margin-top:3.5%;
+	}
+
+	.ftco-navbar-light.scrolled li.nav-item.active,
+	.ftco-navbar-light.scrolled .nav-item:hover {
+		background-color: unset;
+		border-bottom: 2px solid #940077;
+		color: #940077;
 	}
 
 	.ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link {
@@ -77,14 +74,12 @@ body {
 	  }
 
 	  .ftco-navbar-light.scrolled .navbar-nav > .nav-item:hover > .nav-link,
-	  .ftco-navbar-light.scrolled .navbar-nav > .nav-item:hover > .nav-link:hover,
+	  .ftco-navbar-light.scrolled .navbar-nav > .nav-item:hover > a,
 	  .ftco-navbar-light.scrolled .nav-link:hover  {
-		color:whitesmoke;
+		/* color:whitesmoke; */
+		color:#940077;
 	  }
 
-	.mainMenu-container.scrolled .navbar-brand img {
-		width : 30%;
-	}
 
 	/* --------------------------------- slider styles -----------------------------------------*/
 	#slider-section .carousel-caption {
@@ -134,8 +129,88 @@ body {
 
 
 /* ================================ MEDIA QUERIES ========================================== */
-/*  Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) { 
+/*  small devices (portrait phones, landscape phones, less than 767.98px) */
+@media (max-width: 767.98px) { 
+
+	.custom-margin{
+		margin:0%;
+	}
+		/* ------------------- menu styles ---------------------- */
+		.mainMenu-container {
+			padding:5px !important;
+		}
+		.navbar-brand {
+			text-align: center;
+		}
+
+		.navbar-brand img {
+			width : 70%;
+		}
+
+		.mainMenu-container{
+			transition:unset;
+		}
+
+		.mainMenu-container #main-menu.show{
+			/* background-color: rgba(126, 30, 110, 0.8); */
+			background-color: #940077;
+			/* padding:2%; */
+		}
+
+		.mainMenu-container .main-menu {
+			margin-top: 5%;
+		}
+
+		.ftco-navbar-light .navbar-nav > .nav-item {
+			border-bottom:1px solid white;
+			padding:5px 0px;
+		}
+
+		.main-menu .nav-item .nav-link {
+			font-size: 18px;
+			text-align:center;
+		}
+	
+		.main-menu li.nav-item:hover,
+		.main-menu li.nav-item.active{
+	
+			background-color: whitesmoke;
+			/* border-radius:5%; */
+			color:#940077;
+		}
+
+		.main-menu li.nav-item:hover .nav-link,
+		.main-menu li.nav-item.active .nav-link{
+			color:#940077;
+		}
+
+		.navbar-toggler{
+			margin-top:10%;
+		}
+		.navbar-toggler img {
+			width:30%;
+		}
+
+		/*------ menu styles when scrolled --------------*/
+		.mainMenu-container.scrolled #main-menu.show{
+			/* background-color: rgba(126, 30, 110, 0.8); */
+			border-top:4px solid #940077;
+			background-color: #fff;
+			/* padding:2%; */
+		}
+
+		.ftco-navbar-light.scrolled .navbar-nav > .nav-item{
+			border-bottom:2px solid #940077;
+			padding:10px 0px;
+		}
+
+		.mainMenu-container.scrolled .navbar-brand img {
+			width : 65%;
+		}
+
+		.mainMenu-container.scrolled .navbar-toggler{
+			margin-top:5%;
+		}
 
 		/* slider styles */
 		#slider-section .carousel-item {
@@ -144,10 +219,8 @@ body {
 		}
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) { 
-
- }
+/* Small devices (landscape phones, 576px and up) 
+@media (min-width: 576px) and (max-width: 767.98px) {  } */
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) { 
@@ -157,6 +230,25 @@ body {
  /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
 	
+	/* ------------------- menu styles ---------------------- */
+	.mainMenu-container {
+		padding:18px !important;
+	}
+
+	.navbar-brand img {
+		width : 50%;
+	}
+
+
+	.ftco-navbar-light .navbar-nav > .nav-item {
+		margin:0% 2%;
+	}
+
+	/*-----menu styles when scrolled ------------------------*/
+	.mainMenu-container.scrolled .navbar-brand img {
+		width : 30%;
+	}
+
 	/* slider styles */
 	#slider-section .carousel-item {
 		
